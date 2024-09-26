@@ -4,10 +4,14 @@ import (
 	"log"
 	"net/http"
 
+	"ecommerce/backend/internal/repository"
+
 	"github.com/gorilla/mux"
 )
 
 func main() {
+	repository.ConnectDB()
+
 	r := mux.NewRouter()
 
 	// TODO: Add routes and handlers
