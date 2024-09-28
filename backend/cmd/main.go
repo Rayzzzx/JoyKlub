@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"ecommerce/backend/internal/handlers"
-	"ecommerce/backend/internal/repository"
+	"github.com/Rayzzzx/JoyKlub/internal/handlers"
+	"github.com/Rayzzzx/JoyKlub/internal/repository"
 
 	"github.com/gorilla/mux"
 )

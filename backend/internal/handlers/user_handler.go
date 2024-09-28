@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"ecommerce/backend/internal/models"
-	"ecommerce/backend/internal/repository"
+	"github.com/Rayzzzx/JoyKlub/internal/models"
+	"github.com/Rayzzzx/JoyKlub/internal/repository"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"golang.org/x/crypto/bcrypt"
@@ -20,7 +20,7 @@ func RegisterUser(w http.ResponseWriter, r *http.Request) {
 	}
 
 	// Hash the password
-	hashedPassword, err := bcrypt,GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
+	hashedPassword, err := bcrypt.GenerateFromPassword([]byte(user.Password), bcrypt.DefaultCost)
 	if err != nil {
 		http.Error(w, "Error hashing password", http.StatusInternalServerError)
 		return
@@ -30,7 +30,7 @@ func RegisterUser(w http.ResponseWriter, r *http.Request) {
 	// Insert user into database
 	collection := repository.Client.Database("ecommerce").Collection("users")
 	_, err = collection.InsertOne(r.Context(), user)
-	uf err != nil {
+	if err != nil {
 		http.Error(w, "Error creating user", http.StatusInternalServerError)
 		return
 	}
