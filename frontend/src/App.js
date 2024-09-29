@@ -10,16 +10,17 @@ import Cart from './pages/Cart';
 function App() {
   return (
     <Router>
-      <div className="App">
+      <div className="min-h-screen bg-[#FFF5F5]">
         <Header />
-        <h1>Welcome to JoyKlub</h1>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/products" element={<ProductList />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
+        <main className="container mx-auto px-4 py-8">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/products" element={<ProductList />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );
