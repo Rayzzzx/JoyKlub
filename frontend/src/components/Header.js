@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import logoImage from '../assets/images/joyklub-logo.jpg';
 
 function Header() {
   return (
     <header className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to="/" className="text-3xl font-bold">
-          <span className="text-[#E24A4A]">Joy</span>
-          <span className="text-[#4A90E2]">Klub</span>
+        <Link to="/" className="flex items-center">
+          <img src={logoImage} alt="JoyKlub Logo" className="h-12 w-auto" /> {/* Adjust height as needed */}
         </Link>
         <nav>
           <ul className="flex space-x-4">
