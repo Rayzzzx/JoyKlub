@@ -125,8 +125,8 @@ function Register() {
               {showConfirmPassword ? <FaEyeSlash className="h-5 w-5 text-gray-500" /> : <FaEye className="h-5 w-5 text-gray-500" />}
             </button>
           </div>
-          <button 
-            type="submit" 
+          <button
+            type="submit"
             disabled={userExists}
             className="w-full bg-[#4A90E2] text-white py-2 px-4 rounded-md hover:bg-[#3A80D2] focus:outline-none focus:ring-2 focus:ring-[#4A90E2] focus:ring-opacity-50 disabled:bg-gray-400 disabled:cursor-not-allowed transition duration-200"
           >
